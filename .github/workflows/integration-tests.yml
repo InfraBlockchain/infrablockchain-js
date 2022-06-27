@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.0.x
           token: ${{ github.token }}
@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.0.x
           token: ${{ github.token }}
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.0.x
           token: ${{ github.token }}
@@ -179,7 +179,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.0.x
           token: ${{ github.token }}
@@ -234,7 +234,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.1.x
           token: ${{ github.token }}
@@ -289,7 +289,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.1.x
           token: ${{ github.token }}
@@ -344,7 +344,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.1.x
           token: ${{ github.token }}
@@ -403,7 +403,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: release/22.1.x
           token: ${{ github.token }}
@@ -458,7 +458,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: develop
           token: ${{ github.token }}
@@ -513,7 +513,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: develop
           token: ${{ github.token }}
@@ -568,7 +568,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: develop
           token: ${{ github.token }}
@@ -623,7 +623,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           ref: develop
           token: ${{ github.token }}
