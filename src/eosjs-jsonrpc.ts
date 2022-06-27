@@ -201,7 +201,10 @@ export class JsonRpc implements AuthorityProvider, AbiProvider {
 
     /** calls `/v1/chain/get_raw_code_and_abi` and pulls out unneeded raw wasm code */
     public async getRawAbi(accountName: string): Promise<BinaryAbi> {
-        const rawAbi = await this.get_raw_abi(accountName);
+        let rawAbi = await this.get_raw_abi(accountName);
+        if (rawAbi.abi === '') {
+            rawAbi = await this.get_raw_abi('sys.tokenabi');
+        }
         const abi = base64ToBinary(rawAbi.abi);
         return { accountName: rawAbi.account_name, abi };
     }
@@ -329,7 +332,7 @@ export class JsonRpc implements AuthorityProvider, AbiProvider {
     }
 
     public async push_transactions(transactions: PushTransactionArgs[]): Promise<TransactResult[]> {
-        const packedTrxs: PackedTrx[] = transactions.map(({signatures, compression = 0, serializedTransaction, serializedContextFreeData }: PushTransactionArgs) => {
+        const packedTrxs: PackedTrx[] = transactions.map(({ signatures, compression = 0, serializedTransaction, serializedContextFreeData }: PushTransactionArgs) => {
             return {
                 signatures,
                 compression,
@@ -337,7 +340,7 @@ export class JsonRpc implements AuthorityProvider, AbiProvider {
                 packed_trx: arrayToHex(serializedTransaction),
             };
         });
-        return await this.fetch('/v1/chain/push_transactions', packedTrxs );
+        return await this.fetch('/v1/chain/push_transactions', packedTrxs);
     }
 
     /** Send a serialized transaction */

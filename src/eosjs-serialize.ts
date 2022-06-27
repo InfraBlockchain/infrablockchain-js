@@ -893,7 +893,7 @@ export const createInitialTypes = (): Map<string, Type> => {
         bool: createType({
             name: 'bool',
             serialize: (buffer: SerialBuffer, data: boolean) => {
-                if ( !(typeof data === 'boolean' || typeof data === 'number' && ( data === 1 || data === 0))) {
+                if (!(typeof data === 'boolean' || typeof data === 'number' && (data === 1 || data === 0))) {
                     throw new Error('Expected boolean or number equal to 1 or 0');
                 }
                 buffer.push(data ? 1 : 0);
@@ -1583,8 +1583,8 @@ const addAdditionalTypes = (): Map<string, Type> => {
     const initialTypes = createInitialTypes();
     initialTypes.set('null_t', createType({
         name: 'null_t',
-        serialize: (buffer: SerialBuffer, anyvar: Anyvar) => {},
-        deserialize: (buffer: SerialBuffer, state?: SerializerState) => {}
+        serialize: (buffer: SerialBuffer, anyvar: Anyvar) => { },
+        deserialize: (buffer: SerialBuffer, state?: SerializerState) => { }
     }));
     initialTypes.set('any_object', createType({
         name: 'any_object',
