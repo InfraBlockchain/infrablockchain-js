@@ -48,7 +48,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.0.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.0.x-eosjs-release_22.0.x-coverage
           path: coverage/merged-report
@@ -107,7 +107,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.1.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.1.x-eosjs-release_22.0.x-coverage
           path: coverage/merged-report
@@ -162,7 +162,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.2.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.2.x-eosjs-release_22.0.x-coverage
           path: coverage/merged-report
@@ -217,7 +217,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'develop'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-develop-eosjs-release_22.0.x-coverage
           path: coverage/merged-report
@@ -272,7 +272,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.0.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.0.x-eosjs-release_22.1.x-coverage
           path: coverage/merged-report
@@ -327,7 +327,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.1.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.1.x-eosjs-release_22.1.x-coverage
           path: coverage/merged-report
@@ -386,7 +386,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.2.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.2.x-eosjs-release_22.1.x-coverage
           path: coverage/merged-report
@@ -441,7 +441,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'develop'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-develop-eosjs-release_22.1.x-coverage
           path: coverage/merged-report
@@ -496,7 +496,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.0.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.0.x-eosjs-develop-coverage
           path: coverage/merged-report
@@ -551,7 +551,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.1.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.1.x-eosjs-develop-coverage
           path: coverage/merged-report
@@ -606,7 +606,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'release/2.2.x'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-release_2.2.x-eosjs-develop-coverage
           path: coverage/merged-report
@@ -665,7 +665,7 @@ jobs:
         env:
           CYPRESS_NODEOS_VER: 'develop'
       - name: Archive code coverage results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: nodeos-develop-eosjs-develop-coverage
           path: coverage/merged-report
