@@ -385,6 +385,64 @@ describe('JSON RPC', () => {
         expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
     });
 
+    it('calls get_system_token_balance', async () => {
+        const expPath = '/v1/chain/get_system_token_balance';
+        const accountName = 'eosio';
+        const expReturn = {
+            total: '497.8400 SYS',
+            sys_tokens: [
+                {
+                    t: 'systoken.a',
+                    qty: '497.8400 DUSD'
+                }
+            ]
+        };
+        const expParams = {
+            body: JSON.stringify({
+                account: accountName,
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_system_token_balance(accountName);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_system_token_list', async () => {
+        const expPath = '/v1/chain/get_system_token_list';
+        const tokenMeta = true;
+        const expReturn = {
+            count: 2,
+            tokens: [
+                {
+                    id: 'systoken.a',
+                    weight: 10000,
+                    sym: '4,DUSD',
+                    total_supply: '31700.0000 DUSD',
+                    url: 'http://sysdepo-a.org',
+                    desc: 'system depository a'
+                }
+            ]
+        };
+        const expParams = {
+            body: JSON.stringify({
+                token_meta: tokenMeta,
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_system_token_list(tokenMeta);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
     it('calls get_table_rows with all params', async () => {
         const expPath = '/v1/chain/get_table_rows';
         const json = false;
@@ -602,6 +660,164 @@ describe('JSON RPC', () => {
         fetchMock.once(JSON.stringify(expReturn));
 
         const response = await jsonRpc.get_table_by_scope(callParams);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_token_balance', async () => {
+        const expPath = '/v1/chain/get_token_balance';
+        const token = 'systoken.a';
+        const accountName = 'systoken.a';
+        const expReturn = '497.8400 DUSD';
+        const expParams = {
+            body: JSON.stringify({
+                token,
+                account: accountName
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_token_balance(token, accountName);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_token_info', async () => {
+        const expPath = '/v1/chain/get_token_info';
+        const token = 'systoken.a';
+        const expReturn = {
+            token_id: 'systoken.a',
+            sym: '4,DUSD',
+            total_supply: '31700.0000 DUSD',
+            url: 'http://sysdepo-a.org',
+            desc: 'system depository a'
+        };
+        const expParams = {
+            body: JSON.stringify({
+                token,
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_token_info(token);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_top_tx_vote_receiver_list', async () => {
+        const expPath = '/v1/chain/get_top_tx_vote_receiver_list';
+        const offset = 0;
+        const limit = 30;
+        const expReturn = {
+            tx_vote_receiver_list: [
+                {
+                    account: 'producer.c',
+                    tx_votes_weighted: '36276.32610860069689807',
+                    tx_votes: 1600
+                }
+            ],
+            total_tx_votes_weighted: '36276.32610860069689807',
+            total_tx_votes: 1600,
+            more: false
+        };
+        const expParams = {
+            body: JSON.stringify({
+                offset,
+                limit
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_top_tx_vote_receiver_list(offset, limit);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_tx_vote_stat_for_account', async () => {
+        const expPath = '/v1/chain/get_tx_vote_stat_for_account';
+        const accountName = 'producer.a';
+        const expReturn = {
+            account: 'producer.a',
+            tx_votes_weighted: '6801.81073310651208885',
+            tx_votes: 300
+        };
+        const expParams = {
+            body: JSON.stringify({
+                account: accountName,
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_tx_vote_stat_for_account(accountName);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_txfee_item', async () => {
+        const expPath = '/v1/chain/get_txfee_item';
+        const code = '';
+        const action = '';
+        const expReturn = {
+            value: 0,
+            fee_type: 1
+        };
+        const expParams = {
+            body: JSON.stringify({
+                code,
+                action
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_txfee_item(code, action);
+
+        expect(response).toEqual(expReturn);
+        expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
+    });
+
+    it('calls get_txfee_list', async () => {
+        const expPath = '/v1/chain/get_txfee_list';
+        const code_lower_bound = '';
+        const code_upper_bound = '';
+        const limit = 100;
+        const expReturn = {
+            tx_fee_list: [
+                {
+                    code: '',
+                    action: '',
+                    value: 0,
+                    fee_type: 1
+                }
+            ],
+            more: false
+        };
+        const expParams = {
+            body: JSON.stringify({
+                code_lower_bound,
+                code_upper_bound,
+                limit
+            }),
+            method: 'POST',
+        };
+
+        fetchMock.once(JSON.stringify(expReturn));
+
+        const response = await jsonRpc.get_txfee_list(code_lower_bound, code_upper_bound, limit);
 
         expect(response).toEqual(expReturn);
         expect(fetch).toBeCalledWith(endpoint + expPath, expParams);
