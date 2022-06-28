@@ -195,7 +195,7 @@ export class Api {
             delay_sec: 0,
             context_free_actions: [],
             actions: [],
-            transaction_extensions: [],
+            transaction_extensions: transaction.transaction_extensions || [],
             ...transaction,
         });
         return buffer.asUint8Array();
@@ -227,7 +227,7 @@ export class Api {
 
     // Order of adding to transaction_extension is transaction_extension id ascending
     public serializeTransactionExtensions(transaction: Transaction): [number, string][] {
-        let transaction_extensions: [number, string][] = [];
+        let transaction_extensions: [number, string][] = [...transaction.transaction_extensions];
         if (transaction.resource_payer) {
             const extensionBuffer = new ser.SerialBuffer({ textEncoder: this.textEncoder, textDecoder: this.textDecoder });
             const types = ser.getTypesFromAbi(ser.createTransactionExtensionTypes());
