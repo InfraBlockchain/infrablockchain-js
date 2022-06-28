@@ -36,6 +36,13 @@ import {
     GetTransactionResult,
     GetKeyAccountsResult,
     GetControlledAccountsResult,
+    GetSystemTokenBalanceResult,
+    GetSystemTokenListResult,
+    GetTokenInfoResult,
+    GetTopTxVoteReceiverListResult,
+    GetTxVoteStatForAccountResult,
+    GetTxFeeItemResult,
+    GetTxFeeListResult,
 } from './eosjs-rpc-interfaces';
 import { Authorization } from './eosjs-serialize';
 import { RpcError } from './eosjs-rpcerror';
@@ -219,6 +226,18 @@ export class JsonRpc implements AuthorityProvider, AbiProvider {
         return await this.fetch('/v1/chain/get_scheduled_transactions', { json, lower_bound: lowerBound, limit });
     }
 
+    /** Raw call to `/v1/chain/get_system_token_balance` */
+    public async get_system_token_balance(accountName: string): Promise<GetSystemTokenBalanceResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_system_token_balance', { account: accountName });
+    }
+
+    /** Raw call to `/v1/chain/get_system_token_list` */
+    public async get_system_token_list(token_meta = false): Promise<GetSystemTokenListResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_system_token_list', { token_meta });
+    }
+
     /** Raw call to `/v1/chain/get_table_rows` */
     public async get_table_rows({
         json = true,
@@ -295,6 +314,42 @@ export class JsonRpc implements AuthorityProvider, AbiProvider {
                 upper_bound,
                 limit,
             });
+    }
+
+    /** Raw call to `/v1/chain/get_token_balance` */
+    public async get_token_balance(token: string, accountName: string): Promise<string> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_token_balance', { token, account: accountName });
+    }
+
+    /** Raw call to `/v1/chain/get_token_info` */
+    public async get_token_info(token: string): Promise<GetTokenInfoResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_token_info', { token });
+    }
+
+    /** Raw call to `/v1/chain/get_top_tx_vote_receiver_list` */
+    public async get_top_tx_vote_receiver_list(offset = 0, limit = 30): Promise<GetTopTxVoteReceiverListResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_top_tx_vote_receiver_list', { offset, limit });
+    }
+
+    /** Raw call to `/v1/chain/get_tx_vote_stat_for_account` */
+    public async get_tx_vote_stat_for_account(accountName: string): Promise<GetTxVoteStatForAccountResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_tx_vote_stat_for_account', { account: accountName });
+    }
+
+    /** Raw call to `/v1/chain/get_txfee_item` */
+    public async get_txfee_item(code: string, action: string): Promise<GetTxFeeItemResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_txfee_item', { code, action });
+    }
+
+    /** Raw call to `/v1/chain/get_txfee_list` */
+    public async get_txfee_list(code_lower_bound = '', code_upper_bound = '', limit = 100): Promise<GetTxFeeListResult> {
+        // TODO: Need to test
+        return await this.fetch('/v1/chain/get_txfee_list', { code_lower_bound, code_upper_bound, limit });
     }
 
     /** Get subset of `availableKeys` needed to meet authorities in `transaction`. Implements `AuthorityProvider` */

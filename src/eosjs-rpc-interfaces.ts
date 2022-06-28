@@ -470,6 +470,32 @@ export interface GetScheduledTransactionsResult {
     more: string;
 }
 
+/** Return value of `/v1/chain/get_system_token_balance` */
+export interface GetSystemTokenBalanceResult {
+    total: string;
+    sys_token: SystemTokenBalance[]
+}
+
+export interface SystemTokenBalance {
+    t: string;
+    qty: string;
+}
+
+/** Return value of `/v1/chain/get_system_token_list` */
+export interface GetSystemTokenListResult {
+    count: number;
+    tokens: SystemToken[]
+}
+
+export interface SystemToken {
+    id: string;
+    weight: number;
+    sym: string;
+    total_supply: string;
+    url: string;
+    desc: string;
+}
+
 /** Return value of `/v1/chain/get_table_rows` and `/v1/chain/get_kv_table_rows` */
 export interface GetTableRowsResult {
     rows: any[];
@@ -490,6 +516,49 @@ export interface GetTableByScopeResultRow {
 export interface GetTableByScopeResult {
     rows: GetTableByScopeResultRow[];
     more: string;
+}
+
+/** Return value of `/v1/chain/get_token_info` */
+export interface GetTokenInfoResult {
+    token_id: string;
+    sym: string;
+    total_supply: string;
+    url: string;
+    desc: string;
+}
+
+/** Return value of `/v1/chain/get_top_tx_vote_receiver_list` */
+export interface GetTopTxVoteReceiverListResult {
+    tx_vote_receiver: GetTxVoteStatForAccountResult[];
+    total_tx_votes_weighted: string;
+    total_tx_votes: number;
+    more: boolean;
+}
+
+/** Return value of `/v1/chain/get_tx_vote_stat_for_account` */
+export interface GetTxVoteStatForAccountResult {
+    account: string;
+    tx_vote_weighted: string;
+    tx_votes: number;
+}
+
+/** Return value of `/v1/chain/get_txfee_item` */
+export interface GetTxFeeItemResult {
+    value: number;
+    fee_type: number;
+}
+
+/** Return value of `/v1/chain/get_txfee_list` */
+export interface GetTxFeeListResult {
+    tx_fee_list: TxFee[];
+    more: boolean;
+}
+
+export interface TxFee {
+    code: string;
+    action: string;
+    value: number;
+    fee_type: number;
 }
 
 /** Arguments for `push_transaction` */
