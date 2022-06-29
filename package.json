@@ -1,5 +1,5 @@
 {
-  "name": "infra-js",
+  "name": "infrablockchain-js",
   "version": "22.1.0",
   "description": "Talk to infrablockchain API",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "cypress-ui": "cypress open",
     "prepare": "npm run build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
-    "test": "jest src/tests/*infra-js*",
+    "test": "jest src/tests/*infrablockchain-js*",
     "test-node": "jest src/tests/*node*",
     "test-types": "jest src/tests/type-checks.test.ts",
     "test-all": "yarn test && yarn test-node && yarn test-types && yarn cypress",
@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/InfraBlockchain/infra-js.git"
+    "url": "https://github.com/InfraBlockchain/infrablockchain-js.git"
   },
   "dependencies": {
     "bn.js": "5.2.0",

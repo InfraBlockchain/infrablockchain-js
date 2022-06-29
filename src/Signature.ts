@@ -6,8 +6,8 @@ import {
     KeyType,
     signatureToString,
     stringToSignature,
-} from './infra-js-numeric';
-import { constructElliptic, PublicKey } from './infra-js-key-conversions';
+} from './infrablockchain-js-numeric';
+import { constructElliptic, PublicKey } from './infrablockchain-js-key-conversions';
 
 /** Represents/stores a Signature and provides easy conversion for use with `elliptic` lib */
 export class Signature {

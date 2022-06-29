@@ -1,10 +1,10 @@
 /**
  * @module Javascript-API
- * copyright defined in infra-js/LICENSE.txt
+ * copyright defined in infrablockchain-js/LICENSE.txt
  */
 
-import { Abi, PushTransactionArgs, ProcessedAction } from './infra-js-rpc-interfaces';
-import { Anyvar, Authorization, Action, SerializedAction } from './infra-js-serialize';
+import { Abi, PushTransactionArgs, ProcessedAction } from './infrablockchain-js-rpc-interfaces';
+import { Anyvar, Authorization, Action, SerializedAction } from './infrablockchain-js-serialize';
 
 /** Arguments to `getRequiredKeys` */
 export interface AuthorityProviderArgs {

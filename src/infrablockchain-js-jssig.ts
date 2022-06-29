@@ -1,18 +1,18 @@
 /**
  * @module JS-Sig
  */
-// copyright defined in infra-js/LICENSE.txt
+// copyright defined in infrablockchain-js/LICENSE.txt
 
 import { ec } from 'elliptic';
 
-import { SignatureProvider, SignatureProviderArgs } from './infra-js-api-interfaces';
-import { PushTransactionArgs } from './infra-js-rpc-interfaces';
+import { SignatureProvider, SignatureProviderArgs } from './infrablockchain-js-api-interfaces';
+import { PushTransactionArgs } from './infrablockchain-js-rpc-interfaces';
 import {
     PrivateKey,
     PublicKey,
     Signature,
-} from './infra-js-key-conversions';
-import { convertLegacyPublicKey } from './infra-js-numeric';
+} from './infrablockchain-js-key-conversions';
+import { convertLegacyPublicKey } from './infrablockchain-js-numeric';
 
 /** expensive to construct; so we do it once and reuse it */
 const defaultEc = new ec('secp256k1');

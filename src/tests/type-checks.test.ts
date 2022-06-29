@@ -1,8 +1,8 @@
 
-import { JsonRpc } from '../infra-js-jsonrpc';
-import { JsSignatureProvider } from '../infra-js-jssig';
-import { Api } from '../infra-js-api';
-import * as ser from '../infra-js-serialize';
+import { JsonRpc } from '../infrablockchain-js-jsonrpc';
+import { JsSignatureProvider } from '../infrablockchain-js-jssig';
+import { Api } from '../infrablockchain-js-api';
+import * as ser from '../infrablockchain-js-serialize';
 import fetch from 'node-fetch';
 const { TextEncoder, TextDecoder } = require('util');
 import {
@@ -30,8 +30,8 @@ import {
     AbiBinToJsonResult,
     TraceApiGetBlockResult,
     DBSizeGetResult,
-} from '../infra-js-rpc-interfaces';
-import { Transaction, TransactResult } from '../infra-js-api-interfaces';
+} from '../infrablockchain-js-rpc-interfaces';
+import { Transaction, TransactResult } from '../infrablockchain-js-api-interfaces';
 import 'jest-extended';
 
 const privateKey = '5JuH9fCXmU3xbj8nRmhPZaVrxxXrdPaRmZLW1cznNTmTQR2Kg5Z';
@@ -41,7 +41,7 @@ const signatureProvider = new JsSignatureProvider([privateKey]);
 const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 /** Checking types with verifyType/complexOrPrimitive
- * To ensure that the data structure coming from eos matches the declared types in infra-js for developers and documentation
+ * To ensure that the data structure coming from eos matches the declared types in infrablockchain-js for developers and documentation
  * Since typescript is not a runtime language, it's required to test with javascript format
  * Create an object matching the typescript type with some requirements:
  * nullable: make the key a string and add a `&` character to the end

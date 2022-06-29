@@ -1,12 +1,12 @@
 /**
  * @module WebAuthn-Sig
  */
-// copyright defined in infra-js/LICENSE.txt
+// copyright defined in infrablockchain-js/LICENSE.txt
 
-import { SignatureProvider, SignatureProviderArgs } from './infra-js-api-interfaces';
-import { PushTransactionArgs } from './infra-js-rpc-interfaces';
-import * as ser from './infra-js-serialize';
-import * as numeric from './infra-js-numeric';
+import { SignatureProvider, SignatureProviderArgs } from './infrablockchain-js-api-interfaces';
+import { PushTransactionArgs } from './infrablockchain-js-rpc-interfaces';
+import * as ser from './infrablockchain-js-serialize';
+import * as numeric from './infrablockchain-js-numeric';
 import { ec } from 'elliptic';
 
 /** Signs transactions using WebAuthn */

@@ -1,7 +1,7 @@
-To import `infra-js` using [ES module syntax](https://en.wikipedia.org/wiki/ECMAScript) the following code is provided.
+To import `infrablockchain-js` using [ES module syntax](https://en.wikipedia.org/wiki/ECMAScript) the following code is provided.
 ```javascript
-import { Api, JsonRpc } from 'infra-js';
-import { JsSignatureProvider } from 'infra-js/dist/infra-js-jssig';  // development only
+import { Api, JsonRpc } from 'infrablockchain-js';
+import { JsSignatureProvider } from 'infrablockchain-js/dist/infrablockchain-js-jssig';  // development only
 
 const privateKeys = [privateKey1];
 

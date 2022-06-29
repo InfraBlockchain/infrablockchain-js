@@ -4,8 +4,8 @@ about: Create a report to help us improve
 
 ---
 
-**Version of infra-js**
-_which version of infra-js exhibits the issue_
+**Version of infrablockchain-js**
+_which version of infrablockchain-js exhibits the issue_
 
 **Describe the bug**
 A clear and concise description of what the bug is.

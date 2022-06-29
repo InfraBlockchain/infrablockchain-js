@@ -1,14 +1,14 @@
 /**
  * @module Serialize
  */
-// copyright defined in infra-js/LICENSE.txt
+// copyright defined in infrablockchain-js/LICENSE.txt
 /* eslint-disable max-classes-per-file */
 /* eslint-disable jsdoc/check-indentation */
 
-import * as numeric from './infra-js-numeric';
-import { TransactionHeader } from './infra-js-api-interfaces';
-import { Abi, BlockTaposInfo } from './infra-js-rpc-interfaces';
-import { Query } from './infra-js-api-interfaces';
+import * as numeric from './infrablockchain-js-numeric';
+import { TransactionHeader } from './infrablockchain-js-api-interfaces';
+import { Abi, BlockTaposInfo } from './infrablockchain-js-rpc-interfaces';
+import { Query } from './infrablockchain-js-api-interfaces';
 
 /** A field in an abi */
 export interface Field {
@@ -51,7 +51,7 @@ export class SerializerState {
  *      * value:
  *          * If type === 'any_object', then value is an object. The values within the object are anyvar.
  *          * If type === 'any_array', then value is an array of anyvar.
- *          * Else, value must be infra-js-compatible with the specified type (e.g. uint64 should be a string
+ *          * Else, value must be infrablockchain-js-compatible with the specified type (e.g. uint64 should be a string
  *            containing the value in decimal).
  *  * Other object. The values within the object are anyvar.
  *

@@ -1,6 +1,6 @@
 import { skipOn } from '@cypress/skip-test';
 
-describe('infra-js web test', () => {
+describe('infrablockchain-js web test', () => {
     it('loads', () => {
         cy.visit(('./src/tests/web.html'));
     });
