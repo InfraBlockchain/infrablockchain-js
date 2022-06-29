@@ -1,7 +1,7 @@
 /**
  * @module JS-Sig
  */
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 
 import { ec } from 'elliptic';
 

@@ -1,6 +1,6 @@
 /**
  * @module RPC-API-Methods
- * copyright defined in eosjs/LICENSE.txt
+ * copyright defined in infra-js/LICENSE.txt
  */
 
 import { TransactionReceiptHeader, TransactionTrace } from './infra-js-api-interfaces';

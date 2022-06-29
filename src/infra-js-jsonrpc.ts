@@ -1,7 +1,7 @@
 /**
  * @module JSON-RPC
  */
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 
 import { AbiProvider, AuthorityProvider, AuthorityProviderArgs, BinaryAbi, TransactResult } from './infra-js-api-interfaces';
 import { base64ToBinary, convertLegacyPublicKeys } from './infra-js-numeric';

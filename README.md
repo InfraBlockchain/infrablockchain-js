@@ -1,5 +1,5 @@
-# eosjs
-[![Build Status](https://github.com/eosio/eosjs/workflows/CI/badge.svg?branch=master)](https://github.com/EOSIO/eosjs/actions)  [![npm version](https://badge.fury.io/js/eosjs.svg)](https://badge.fury.io/js/eosjs)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![npm](https://img.shields.io/npm/dw/eosjs.svg)
+# infra-js
+[![Build Status](https://github.com/InfraBlockchain/infra-js/workflows/CI/badge.svg?branch=master)](https://github.com/InfraBlockchain/infra-js/actions)  [![npm version](https://badge.fury.io/js/infra-js.svg)](https://badge.fury.io/js/infra-js)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![npm](https://img.shields.io/npm/dw/infra-js.svg)
 
 Javascript API for integration with EOSIO-based blockchains using [EOSIO RPC API](https://developers.eos.io/eosio-nodeos/reference).
 
@@ -9,11 +9,11 @@ Documentation can be found [here](https://eosio.github.io/eosjs)
 
 ### NPM
 
-The official distribution package can be found at [npm](https://www.npmjs.com/package/eosjs).
+The official distribution package can be found at [npm](https://www.npmjs.com/package/infra-js).
 
 ### Add dependency to your project
 
-`yarn add eosjs`
+`yarn add infra-js`
 
 ### Using with Typescript
 
@@ -40,16 +40,16 @@ Clone this repository locally then run `yarn build-web`.  The browser distributi
 
 Importing using ESM syntax is supported using TypeScript, [webpack](https://webpack.js.org/api/module-methods), or  [Node.js with `--experimental-modules` flag](https://nodejs.org/api/esm.html)
 ```js
-import { Api, JsonRpc, RpcError } from 'eosjs';
-import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';           // development only
+import { Api, JsonRpc, RpcError } from 'infra-js';
+import { JsSignatureProvider } from 'infra-js/dist/infra-js-jssig';           // development only
 ```
 
 ### CommonJS
 
 Importing using commonJS syntax is supported by Node.js out of the box.
 ```js
-const { Api, JsonRpc, RpcError } = require('eosjs');
-const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');      // development only
+const { Api, JsonRpc, RpcError } = require('infra-js');
+const { JsSignatureProvider } = require('infra-js/dist/infra-js-jssig');      // development only
 const fetch = require('node-fetch');                                    // node only; not needed in browsers
 const { TextEncoder, TextDecoder } = require('util');                   // node only; native TextEncoder/Decoder
 ```
@@ -88,6 +88,16 @@ const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), te
 ```js
 (async () => {
   const result = await api.transact({
+    transaction_extensions: [
+      [
+        10, // txfee-payer
+        encodeName("systoken.b")
+      ],
+      [
+        11, // trx-vote
+        encodeName("systoken.b")
+      ]
+    ],
     actions: [{
       account: 'eosio.token',
       name: 'transfer',

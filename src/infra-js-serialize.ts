@@ -1,7 +1,7 @@
 /**
  * @module Serialize
  */
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 /* eslint-disable max-classes-per-file */
 /* eslint-disable jsdoc/check-indentation */
 
@@ -51,7 +51,7 @@ export class SerializerState {
  *      * value:
  *          * If type === 'any_object', then value is an object. The values within the object are anyvar.
  *          * If type === 'any_array', then value is an array of anyvar.
- *          * Else, value must be eosjs-compatible with the specified type (e.g. uint64 should be a string
+ *          * Else, value must be infra-js-compatible with the specified type (e.g. uint64 should be a string
  *            containing the value in decimal).
  *  * Other object. The values within the object are anyvar.
  *

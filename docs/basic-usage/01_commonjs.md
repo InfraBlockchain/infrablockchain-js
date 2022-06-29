@@ -1,7 +1,7 @@
-To import `eosjs` using commonjs syntax follow the code below.
+To import `infra-js` using commonjs syntax follow the code below.
 ```javascript
-const { Api, JsonRpc } = require('eosjs');
-const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');  // development only
+const { Api, JsonRpc } = require('infra-js');
+const { JsSignatureProvider } = require('infra-js/dist/infra-js-jssig');  // development only
 const fetch = require('node-fetch'); //node only
 const { TextDecoder, TextEncoder } = require('util'); //node only
 

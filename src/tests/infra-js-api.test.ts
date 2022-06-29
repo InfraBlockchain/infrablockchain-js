@@ -129,7 +129,7 @@ const deserializedActions = [
     },
 ];
 
-describe('eosjs-api', () => {
+describe('infra-js-api', () => {
     let api: any;
     let rpc: any;
     const fetch = async (input: any, init: any): Promise<any> => ({

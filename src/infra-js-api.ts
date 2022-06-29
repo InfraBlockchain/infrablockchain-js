@@ -1,7 +1,7 @@
 /**
  * @module API
  */
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 /* eslint-disable max-classes-per-file */
 
 import { inflate, deflate } from 'pako';

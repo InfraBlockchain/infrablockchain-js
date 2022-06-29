@@ -1,6 +1,6 @@
 /**
  * @module Javascript-API
- * copyright defined in eosjs/LICENSE.txt
+ * copyright defined in infra-js/LICENSE.txt
  */
 
 import { Abi, PushTransactionArgs, ProcessedAction } from './infra-js-rpc-interfaces';

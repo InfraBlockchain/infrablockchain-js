@@ -1,7 +1,7 @@
 /**
  * @module WebAuthn-Sig
  */
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 
 import { SignatureProvider, SignatureProviderArgs } from './infra-js-api-interfaces';
 import { PushTransactionArgs } from './infra-js-rpc-interfaces';

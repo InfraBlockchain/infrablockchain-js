@@ -1,9 +1,9 @@
-`eosjs` can be installed via [`yarn`](https://yarnpkg.com/en/)
+`infra-js` can be installed via [`yarn`](https://yarnpkg.com/en/)
 ```javascript
-yarn add eosjs
+yarn add infra-js
 ```
 
 or [`npm`](https://www.npmjs.com/)
 ```javascript
-npm install eosjs
+npm install infra-js
 ```

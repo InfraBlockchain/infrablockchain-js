@@ -3,7 +3,7 @@
  */
 import { sha256 } from 'hash.js';
 
-// copyright defined in eosjs/LICENSE.txt
+// copyright defined in infra-js/LICENSE.txt
 
 const ripemd160 = require('./ripemd').RIPEMD160.hash as (a: Uint8Array) => ArrayBuffer;
 

@@ -41,7 +41,7 @@ const signatureProvider = new JsSignatureProvider([privateKey]);
 const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 /** Checking types with verifyType/complexOrPrimitive
- * To ensure that the data structure coming from eos matches the declared types in eosjs for developers and documentation
+ * To ensure that the data structure coming from eos matches the declared types in infra-js for developers and documentation
  * Since typescript is not a runtime language, it's required to test with javascript format
  * Create an object matching the typescript type with some requirements:
  * nullable: make the key a string and add a `&` character to the end

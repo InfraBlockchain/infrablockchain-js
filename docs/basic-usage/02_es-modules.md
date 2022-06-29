@@ -1,7 +1,7 @@
-To import `eosjs` using [ES module syntax](https://en.wikipedia.org/wiki/ECMAScript) the following code is provided.
+To import `infra-js` using [ES module syntax](https://en.wikipedia.org/wiki/ECMAScript) the following code is provided.
 ```javascript
-import { Api, JsonRpc } from 'eosjs';
-import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';  // development only
+import { Api, JsonRpc } from 'infra-js';
+import { JsSignatureProvider } from 'infra-js/dist/infra-js-jssig';  // development only
 
 const privateKeys = [privateKey1];
 

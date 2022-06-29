@@ -169,7 +169,7 @@ describe('JsSignatureProvider', () => {
         }
     });
 
-    it('ensure ecc verifies eosjs\'s Sigs', () => {
+    it('ensure ecc verifies infra-js\'s Sigs', () => {
         for (let idx=0; idx<privateKeys.length; idx++) {
             const KPriv = privateKeys[idx];
             const privateKey = PrivateKey.fromString(KPriv);
