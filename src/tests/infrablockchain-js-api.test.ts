@@ -1,11 +1,11 @@
 const { TextEncoder, TextDecoder } = require('util');
-import { Api } from '../infra-js-api';
-import { JsonRpc } from '../infra-js-jsonrpc';
-import { JsSignatureProvider } from '../infra-js-jssig';
+import { Api } from '../infrablockchain-js-api';
+import { JsonRpc } from '../infrablockchain-js-jsonrpc';
+import { JsSignatureProvider } from '../infrablockchain-js-jssig';
 import * as path from 'path';
 import * as fs from 'fs';
-import { Action } from '../infra-js-serialize';
-import { base64ToBinary } from '../infra-js-numeric';
+import { Action } from '../infrablockchain-js-serialize';
+import { base64ToBinary } from '../infrablockchain-js-numeric';
 
 const transaction = {
     expiration: '2018-09-04T18:42:49',
@@ -129,7 +129,7 @@ const deserializedActions = [
     },
 ];
 
-describe('infra-js-api', () => {
+describe('infrablockchain-js-api', () => {
     let api: any;
     let rpc: any;
     const fetch = async (input: any, init: any): Promise<any> => ({

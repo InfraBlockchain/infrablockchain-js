@@ -1,10 +1,10 @@
 /**
  * @module RPC-API-Methods
- * copyright defined in infra-js/LICENSE.txt
+ * copyright defined in infrablockchain-js/LICENSE.txt
  */
 
-import { TransactionReceiptHeader, TransactionTrace } from './infra-js-api-interfaces';
-import { Authorization } from './infra-js-serialize';
+import { TransactionReceiptHeader, TransactionTrace } from './infrablockchain-js-api-interfaces';
+import { Authorization } from './infrablockchain-js-serialize';
 
 /** Structured format for abis */
 export interface Abi {

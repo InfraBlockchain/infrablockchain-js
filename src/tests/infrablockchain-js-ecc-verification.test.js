@@ -3,12 +3,12 @@ const ecc = require('eosjs-ecc');
 
 const { ec } = require('elliptic');
 
-const { Signature, PrivateKey, PublicKey, sha256 } = require('../infra-js-key-conversions');
+const { Signature, PrivateKey, PublicKey, sha256 } = require('../infrablockchain-js-key-conversions');
 const {
     JsSignatureProvider,
-} = require('../infra-js-jssig');
-const { KeyType } = require('../infra-js-numeric');
-const { SignatureProviderArgs } = require('../infra-js-api-interfaces');
+} = require('../infrablockchain-js-jssig');
+const { KeyType } = require('../infrablockchain-js-numeric');
+const { SignatureProviderArgs } = require('../infrablockchain-js-api-interfaces');
 
 describe('JsSignatureProvider', () => {
     const privateKeys = [
@@ -169,7 +169,7 @@ describe('JsSignatureProvider', () => {
         }
     });
 
-    it('ensure ecc verifies infra-js\'s Sigs', () => {
+    it('ensure ecc verifies infrablockchain-js\'s Sigs', () => {
         for (let idx=0; idx<privateKeys.length; idx++) {
             const KPriv = privateKeys[idx];
             const privateKey = PrivateKey.fromString(KPriv);

@@ -1,7 +1,7 @@
 const ecc = require('eosjs-ecc');
-import { ecc as eccMigration } from '../infra-js-ecc-migration';
+import { ecc as eccMigration } from '../infrablockchain-js-ecc-migration';
 
-import { PrivateKey } from '../infra-js-key-conversions';
+import { PrivateKey } from '../infrablockchain-js-key-conversions';
 
 describe('ecc Migration', () => {
     const privateKeys = [

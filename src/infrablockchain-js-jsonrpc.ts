@@ -1,10 +1,10 @@
 /**
  * @module JSON-RPC
  */
-// copyright defined in infra-js/LICENSE.txt
+// copyright defined in infrablockchain-js/LICENSE.txt
 
-import { AbiProvider, AuthorityProvider, AuthorityProviderArgs, BinaryAbi, TransactResult } from './infra-js-api-interfaces';
-import { base64ToBinary, convertLegacyPublicKeys } from './infra-js-numeric';
+import { AbiProvider, AuthorityProvider, AuthorityProviderArgs, BinaryAbi, TransactResult } from './infrablockchain-js-api-interfaces';
+import { base64ToBinary, convertLegacyPublicKeys } from './infrablockchain-js-numeric';
 import {
     AbiBinToJsonResult,
     AbiJsonToBinResult,
@@ -43,9 +43,9 @@ import {
     GetTxVoteStatForAccountResult,
     GetTxFeeItemResult,
     GetTxFeeListResult,
-} from './infra-js-rpc-interfaces';
-import { Authorization } from './infra-js-serialize';
-import { RpcError } from './infra-js-rpcerror';
+} from './infrablockchain-js-rpc-interfaces';
+import { Authorization } from './infrablockchain-js-serialize';
+import { RpcError } from './infrablockchain-js-rpcerror';
 
 const arrayToHex = (data: Uint8Array): string => {
     let result = '';

@@ -1,5 +1,5 @@
 {
-	"name": "infra-js",
+	"name": "infrablockchain-js",
 	"generators": [
 		{
 			"name": "collate_markdown",

@@ -1,5 +1,5 @@
-import { JsonRpc } from '../infra-js-jsonrpc';
-import { RpcError } from '../infra-js-rpcerror';
+import { JsonRpc } from '../infrablockchain-js-jsonrpc';
+import { RpcError } from '../infrablockchain-js-rpcerror';
 
 describe('JSON RPC', () => {
     const endpointExtraSlash = 'http://localhost/';

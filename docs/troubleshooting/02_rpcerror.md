@@ -5,11 +5,11 @@ The RPCError object will contain a concise error message, for instance 'Invalid 
 In the `details` and `json` examples below, you can see that the error message may not contain enough information to discern what caused the action to fail. The error message contains `eosio_assert_message` assertion failure. Looking further at the details you can see an `overdrawn balance` message.
 ```javascript
 RpcError: eosio_assert_message assertion failure
-    at new RpcError (infra-js-rpcerror.ts:20:13)
-    at JsonRpc.<anonymous> (infra-js-jsonrpc.ts:90:23)
-    at step (infra-js-jsonrpc.js:37:23)
-    at Object.next (infra-js-jsonrpc.js:18:53)
-    at fulfilled (infra-js-jsonrpc.js:9:58)
+    at new RpcError (infrablockchain-js-rpcerror.ts:20:13)
+    at JsonRpc.<anonymous> (infrablockchain-js-jsonrpc.ts:90:23)
+    at step (infrablockchain-js-jsonrpc.js:37:23)
+    at Object.next (infrablockchain-js-jsonrpc.js:18:53)
+    at fulfilled (infrablockchain-js-jsonrpc.js:9:58)
     at processTicksAndRejections (node:internal/process/task_queues:94:5) {
     details: {
         code: 3050003,

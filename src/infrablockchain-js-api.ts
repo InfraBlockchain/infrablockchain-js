@@ -1,7 +1,7 @@
 /**
  * @module API
  */
-// copyright defined in infra-js/LICENSE.txt
+// copyright defined in infrablockchain-js/LICENSE.txt
 /* eslint-disable max-classes-per-file */
 
 import { inflate, deflate } from 'pako';
@@ -19,8 +19,8 @@ import {
     TransactConfig,
     Transaction,
     TransactResult,
-} from './infra-js-api-interfaces';
-import { JsonRpc } from './infra-js-jsonrpc';
+} from './infrablockchain-js-api-interfaces';
+import { JsonRpc } from './infrablockchain-js-jsonrpc';
 import {
     Abi,
     BlockTaposInfo,
@@ -30,8 +30,8 @@ import {
     GetBlockInfoResult,
     GetBlockResult,
     ReadOnlyTransactResult,
-} from './infra-js-rpc-interfaces';
-import * as ser from './infra-js-serialize';
+} from './infrablockchain-js-rpc-interfaces';
+import * as ser from './infrablockchain-js-serialize';
 
 export class Api {
     /** Issues RPC calls */

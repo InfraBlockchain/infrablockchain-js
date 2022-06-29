@@ -1,7 +1,7 @@
-To import `infra-js` using commonjs syntax follow the code below.
+To import `infrablockchain-js` using commonjs syntax follow the code below.
 ```javascript
-const { Api, JsonRpc } = require('infra-js');
-const { JsSignatureProvider } = require('infra-js/dist/infra-js-jssig');  // development only
+const { Api, JsonRpc } = require('infrablockchain-js');
+const { JsSignatureProvider } = require('infrablockchain-js/dist/infrablockchain-js-jssig');  // development only
 const fetch = require('node-fetch'); //node only
 const { TextDecoder, TextEncoder } = require('util'); //node only
 

@@ -3,10 +3,10 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        infrajs_api: './src/infra-js-api.ts',
-        infrajs_jsonrpc: './src/rpc-web.ts',
-        infrajs_jssig: './src/infra-js-jssig.ts',
-        infrajs_numeric: './src/infra-js-numeric.ts',
+        infrablockchainjs_api: './src/infrablockchain-js-api.ts',
+        infrablockchainjs_jsonrpc: './src/rpc-web.ts',
+        infrablockchainjs_jssig: './src/infrablockchain-js-jssig.ts',
+        infrablockchainjs_numeric: './src/infrablockchain-js-numeric.ts',
     },
     devtool: 'inline-source-map',
     mode: 'development',

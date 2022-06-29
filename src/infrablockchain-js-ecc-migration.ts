@@ -1,6 +1,6 @@
-import {PrivateKey, PublicKey, Signature} from './infra-js-jssig';
-import {generateKeyPair} from './infra-js-key-conversions';
-import {KeyType} from './infra-js-numeric';
+import {PrivateKey, PublicKey, Signature} from './infrablockchain-js-jssig';
+import {generateKeyPair} from './infrablockchain-js-key-conversions';
+import {KeyType} from './infrablockchain-js-numeric';
 import {ec as EC} from 'elliptic';
 
 export const ecc = {
@@ -84,6 +84,6 @@ export const ecc = {
             console.warn('Argument `resultEncoding` is deprecated');
         }
 
-        return require('./infra-js-key-conversions').sha256(data);
+        return require('./infrablockchain-js-key-conversions').sha256(data);
     }
 };

@@ -5,8 +5,8 @@ import {
     privateKeyToLegacyString,
     privateKeyToString,
     stringToPrivateKey,
-} from './infra-js-numeric';
-import { constructElliptic, PublicKey, Signature } from './infra-js-key-conversions';
+} from './infrablockchain-js-numeric';
+import { constructElliptic, PublicKey, Signature } from './infrablockchain-js-key-conversions';
 
 /** Represents/stores a private key and provides easy conversion for use with `elliptic` lib */
 export class PrivateKey {

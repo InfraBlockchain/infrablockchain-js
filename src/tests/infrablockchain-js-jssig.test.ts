@@ -1,9 +1,9 @@
 import {ec} from 'elliptic';
 
-import {generateKeyPair, PrivateKey, PublicKey, sha256, Signature} from '../infra-js-key-conversions';
-import {digestFromSerializedData, JsSignatureProvider} from '../infra-js-jssig';
-import {KeyType} from '../infra-js-numeric';
-import {SignatureProviderArgs} from '../infra-js-api-interfaces';
+import {generateKeyPair, PrivateKey, PublicKey, sha256, Signature} from '../infrablockchain-js-key-conversions';
+import {digestFromSerializedData, JsSignatureProvider} from '../infrablockchain-js-jssig';
+import {KeyType} from '../infrablockchain-js-numeric';
+import {SignatureProviderArgs} from '../infrablockchain-js-api-interfaces';
 
 describe('JsSignatureProvider', () => {
     const privateKeys = [
