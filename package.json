@@ -20,7 +20,7 @@
     "docs-serve": "python -m SimpleHTTPServer",
     "docs-publish": "sh .docs/scripts/publish.sh"
   },
-  "author": "block.one",
+  "author": "infrablockchain",
   "license": "MIT",
   "repository": {
     "type": "git",
