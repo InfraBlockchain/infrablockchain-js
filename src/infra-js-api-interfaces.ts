@@ -3,8 +3,8 @@
  * copyright defined in eosjs/LICENSE.txt
  */
 
-import { Abi, PushTransactionArgs, ProcessedAction } from './eosjs-rpc-interfaces';
-import { Anyvar, Authorization, Action, SerializedAction } from './eosjs-serialize';
+import { Abi, PushTransactionArgs, ProcessedAction } from './infra-js-rpc-interfaces';
+import { Anyvar, Authorization, Action, SerializedAction } from './infra-js-serialize';
 
 /** Arguments to `getRequiredKeys` */
 export interface AuthorityProviderArgs {

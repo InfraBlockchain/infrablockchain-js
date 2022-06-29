@@ -3,10 +3,10 @@
  */
 // copyright defined in eosjs/LICENSE.txt
 
-import { SignatureProvider, SignatureProviderArgs } from './eosjs-api-interfaces';
-import { PushTransactionArgs } from './eosjs-rpc-interfaces';
-import * as ser from './eosjs-serialize';
-import * as numeric from './eosjs-numeric';
+import { SignatureProvider, SignatureProviderArgs } from './infra-js-api-interfaces';
+import { PushTransactionArgs } from './infra-js-rpc-interfaces';
+import * as ser from './infra-js-serialize';
+import * as numeric from './infra-js-numeric';
 import { ec } from 'elliptic';
 
 /** Signs transactions using WebAuthn */

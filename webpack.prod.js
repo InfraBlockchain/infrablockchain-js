@@ -4,10 +4,10 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        eosjs_api: './src/eosjs-api.ts',
-        eosjs_jsonrpc: './src/rpc-web.ts',
-        eosjs_jssig: './src/eosjs-jssig.ts',
-        eosjs_numeric: './src/eosjs-numeric.ts',
+        infrajs_api: './src/infra-js-api.ts',
+        infrajs_jsonrpc: './src/rpc-web.ts',
+        infrajs_jssig: './src/infra-js-jssig.ts',
+        infrajs_numeric: './src/infra-js-numeric.ts',
     },
     mode: 'production',
     module: {
@@ -27,7 +27,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['**/*'] }),
         new webpack.ProvidePlugin({
-            Buffer: ["buffer", "Buffer"],
+            Buffer: ['buffer', 'Buffer'],
         })
     ],
     resolve: {

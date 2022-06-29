@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { JsonRpc, RpcError, Api } = require('../../dist');
-const { JsSignatureProvider } = require('../../dist/eosjs-jssig');
+const { JsSignatureProvider } = require('../../dist/infra-js-jssig');
 const fetch = require('node-fetch');
 const { TextEncoder, TextDecoder } = require('util');
 

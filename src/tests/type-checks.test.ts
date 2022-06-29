@@ -1,8 +1,8 @@
 
-import { JsonRpc } from '../eosjs-jsonrpc';
-import { JsSignatureProvider } from '../eosjs-jssig';
-import { Api } from '../eosjs-api';
-import * as ser from '../eosjs-serialize';
+import { JsonRpc } from '../infra-js-jsonrpc';
+import { JsSignatureProvider } from '../infra-js-jssig';
+import { Api } from '../infra-js-api';
+import * as ser from '../infra-js-serialize';
 import fetch from 'node-fetch';
 const { TextEncoder, TextDecoder } = require('util');
 import {
@@ -30,8 +30,8 @@ import {
     AbiBinToJsonResult,
     TraceApiGetBlockResult,
     DBSizeGetResult,
-} from '../eosjs-rpc-interfaces';
-import { Transaction, TransactResult } from '../eosjs-api-interfaces';
+} from '../infra-js-rpc-interfaces';
+import { Transaction, TransactResult } from '../infra-js-api-interfaces';
 import 'jest-extended';
 
 const privateKey = '5JuH9fCXmU3xbj8nRmhPZaVrxxXrdPaRmZLW1cznNTmTQR2Kg5Z';

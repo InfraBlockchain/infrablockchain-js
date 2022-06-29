@@ -3,9 +3,9 @@
     <head>
         <link rel='stylesheet' type='text/css' href='web.css'>
         <script src='../../dist-web/externals.min.js'></script>
-        <script src='../../dist-web/eosjs-api.min.js'></script>
-        <script src='../../dist-web/eosjs-jsonrpc.min.js'></script>
-        <script src='../../dist-web/eosjs-jssig.min.js'></script>
+        <script src='../../dist-web/infra-js-api.min.js'></script>
+        <script src='../../dist-web/infra-js-jsonrpc.min.js'></script>
+        <script src='../../dist-web/infra-js-jssig.min.js'></script>
         <script>
             const privateKey = '5JuH9fCXmU3xbj8nRmhPZaVrxxXrdPaRmZLW1cznNTmTQR2Kg5Z'; // replace with 'bob' account private key
             const r1PrivateKey = 'PVT_R1_GrfEfbv5at9kbeHcGagQmvbFLdm6jqEpgE1wsGbrfbZNjpVgT'
@@ -17,9 +17,9 @@
             * 4) cleos create account alice publicKey
             */
         
-            const rpc = new eosjs_jsonrpc.JsonRpc('http://localhost:8888');
-            const signatureProvider = new eosjs_jssig.JsSignatureProvider([privateKey, r1PrivateKey, cfactorPrivateKey]);
-            const api = new eosjs_api.Api({ rpc, signatureProvider });
+            const rpc = new infrajs_jsonrpc.JsonRpc('http://localhost:8888');
+            const signatureProvider = new infrajs_jssig.JsSignatureProvider([privateKey, r1PrivateKey, cfactorPrivateKey]);
+            const api = new infrajs_api.Api({ rpc, signatureProvider });
         
             const EXECUTING = 'Executing Test', SUCCESS = 'Success', FAILED = 'Failed';
             let resultsLabel, transactionResponse, transactionSignatures, failedAsPlanned;
@@ -667,7 +667,7 @@
                 try {
                     await rpcShouldFail();
                 } catch (e) {
-                    if (e instanceof eosjs_jsonrpc.RpcError) {
+                    if (e instanceof infrajs_jsonrpc.RpcError) {
                         resultsLabel.className = "success";
                         resultsLabel.innerText = SUCCESS;
                         return true;

@@ -19,8 +19,8 @@ import {
     TransactConfig,
     Transaction,
     TransactResult,
-} from './eosjs-api-interfaces';
-import { JsonRpc } from './eosjs-jsonrpc';
+} from './infra-js-api-interfaces';
+import { JsonRpc } from './infra-js-jsonrpc';
 import {
     Abi,
     BlockTaposInfo,
@@ -30,8 +30,8 @@ import {
     GetBlockInfoResult,
     GetBlockResult,
     ReadOnlyTransactResult,
-} from './eosjs-rpc-interfaces';
-import * as ser from './eosjs-serialize';
+} from './infra-js-rpc-interfaces';
+import * as ser from './infra-js-serialize';
 
 export class Api {
     /** Issues RPC calls */

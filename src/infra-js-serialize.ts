@@ -5,10 +5,10 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable jsdoc/check-indentation */
 
-import * as numeric from './eosjs-numeric';
-import { TransactionHeader } from './eosjs-api-interfaces';
-import { Abi, BlockTaposInfo } from './eosjs-rpc-interfaces';
-import { Query } from './eosjs-api-interfaces';
+import * as numeric from './infra-js-numeric';
+import { TransactionHeader } from './infra-js-api-interfaces';
+import { Abi, BlockTaposInfo } from './infra-js-rpc-interfaces';
+import { Query } from './infra-js-api-interfaces';
 
 /** A field in an abi */
 export interface Field {

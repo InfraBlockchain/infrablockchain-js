@@ -1,9 +1,9 @@
 import {ec} from 'elliptic';
 
-import {generateKeyPair, PrivateKey, PublicKey, sha256, Signature} from '../eosjs-key-conversions';
-import {digestFromSerializedData, JsSignatureProvider} from '../eosjs-jssig';
-import {KeyType} from '../eosjs-numeric';
-import {SignatureProviderArgs} from '../eosjs-api-interfaces';
+import {generateKeyPair, PrivateKey, PublicKey, sha256, Signature} from '../infra-js-key-conversions';
+import {digestFromSerializedData, JsSignatureProvider} from '../infra-js-jssig';
+import {KeyType} from '../infra-js-numeric';
+import {SignatureProviderArgs} from '../infra-js-api-interfaces';
 
 describe('JsSignatureProvider', () => {
     const privateKeys = [

@@ -5,14 +5,14 @@
 
 import { ec } from 'elliptic';
 
-import { SignatureProvider, SignatureProviderArgs } from './eosjs-api-interfaces';
-import { PushTransactionArgs } from './eosjs-rpc-interfaces';
+import { SignatureProvider, SignatureProviderArgs } from './infra-js-api-interfaces';
+import { PushTransactionArgs } from './infra-js-rpc-interfaces';
 import {
     PrivateKey,
     PublicKey,
     Signature,
-} from './eosjs-key-conversions';
-import { convertLegacyPublicKey } from './eosjs-numeric';
+} from './infra-js-key-conversions';
+import { convertLegacyPublicKey } from './infra-js-numeric';
 
 /** expensive to construct; so we do it once and reuse it */
 const defaultEc = new ec('secp256k1');

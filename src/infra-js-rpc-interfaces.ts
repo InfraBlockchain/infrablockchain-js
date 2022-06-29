@@ -3,8 +3,8 @@
  * copyright defined in eosjs/LICENSE.txt
  */
 
-import { TransactionReceiptHeader, TransactionTrace } from './eosjs-api-interfaces';
-import { Authorization } from './eosjs-serialize';
+import { TransactionReceiptHeader, TransactionTrace } from './infra-js-api-interfaces';
+import { Authorization } from './infra-js-serialize';
 
 /** Structured format for abis */
 export interface Abi {

@@ -3,8 +3,8 @@
  */
 // copyright defined in eosjs/LICENSE.txt
 
-import { AbiProvider, AuthorityProvider, AuthorityProviderArgs, BinaryAbi, TransactResult } from './eosjs-api-interfaces';
-import { base64ToBinary, convertLegacyPublicKeys } from './eosjs-numeric';
+import { AbiProvider, AuthorityProvider, AuthorityProviderArgs, BinaryAbi, TransactResult } from './infra-js-api-interfaces';
+import { base64ToBinary, convertLegacyPublicKeys } from './infra-js-numeric';
 import {
     AbiBinToJsonResult,
     AbiJsonToBinResult,
@@ -43,9 +43,9 @@ import {
     GetTxVoteStatForAccountResult,
     GetTxFeeItemResult,
     GetTxFeeListResult,
-} from './eosjs-rpc-interfaces';
-import { Authorization } from './eosjs-serialize';
-import { RpcError } from './eosjs-rpcerror';
+} from './infra-js-rpc-interfaces';
+import { Authorization } from './infra-js-serialize';
+import { RpcError } from './infra-js-rpcerror';
 
 const arrayToHex = (data: Uint8Array): string => {
     let result = '';

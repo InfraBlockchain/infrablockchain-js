@@ -1,11 +1,11 @@
 const { TextEncoder, TextDecoder } = require('util');
-import { Api } from '../eosjs-api';
-import { JsonRpc } from '../eosjs-jsonrpc';
-import { JsSignatureProvider } from '../eosjs-jssig';
+import { Api } from '../infra-js-api';
+import { JsonRpc } from '../infra-js-jsonrpc';
+import { JsSignatureProvider } from '../infra-js-jssig';
 import * as path from 'path';
 import * as fs from 'fs';
-import { Action } from '../eosjs-serialize';
-import { base64ToBinary } from '../eosjs-numeric';
+import { Action } from '../infra-js-serialize';
+import { base64ToBinary } from '../infra-js-numeric';
 
 const transaction = {
     expiration: '2018-09-04T18:42:49',

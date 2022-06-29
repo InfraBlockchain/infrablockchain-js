@@ -3,12 +3,12 @@ const ecc = require('eosjs-ecc');
 
 const { ec } = require('elliptic');
 
-const { Signature, PrivateKey, PublicKey, sha256 } = require('../eosjs-key-conversions');
+const { Signature, PrivateKey, PublicKey, sha256 } = require('../infra-js-key-conversions');
 const {
     JsSignatureProvider,
-} = require('../eosjs-jssig');
-const { KeyType } = require('../eosjs-numeric');
-const { SignatureProviderArgs } = require('../eosjs-api-interfaces');
+} = require('../infra-js-jssig');
+const { KeyType } = require('../infra-js-numeric');
+const { SignatureProviderArgs } = require('../infra-js-api-interfaces');
 
 describe('JsSignatureProvider', () => {
     const privateKeys = [
