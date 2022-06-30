@@ -1,14 +1,15 @@
-To vote for a block produder, [submit a transaction](01_how-to-submit-a-transaction.md) with `transaction_extensions` parameter
+To set a transaction fee payer, [submit a transaction](01_how-to-submit-a-transaction.md) with `transaction_extensions` parameter
 
-In the example shown below `useraaaaaaaa` votes for producers `userbbbbbbbb`
+In the example shown below `useraaaaaaaa` submit a transaction with setting fee payer `userbbbbbbbb`
+
 ```javascript
 (async () => {
   await api.transact({
     transaction_extensions: [
       [
-        11, // trx-vote
+        10, // txfee-payer
         encodeName("userbbbbbbbb")
-      ]
+      ],
     ],
     actions: [{
       account: 'useraaaaaaaa',
