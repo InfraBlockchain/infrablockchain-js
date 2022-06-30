@@ -74,6 +74,19 @@ Open a connection to JSON-RPC, include `fetch` when on Node.js.
 const rpc = new JsonRpc('http://127.0.0.1:8888', { fetch });
 ```
 
+A new chain API that infrablockchain has is also implemented in `infrablockchain-js`.
+```js
+    const systemTokenBalance = await rpc.get_system_token_balance("systoken.a");
+    const systemTokenList = await rpc.get_system_token_list(true);
+    const tokenBalance = await rpc.get_token_balance("systoken.a", "systoken.a");
+    const tokenInfo = await rpc.get_token_info("systoken.a");
+    const txVoteReceiverList = await rpc.get_top_tx_vote_receiver_list();
+    const txVoteStat = await rpc.get_tx_vote_stat_for_account("producer.a");
+    const txFeeItem = await rpc.get_txfee_item("", "");
+    const txFeeList = await rpc.get_txfee_list();
+```
+
+
 ### API
 
 Include textDecoder and textEncoder when using in Node. You may exclude these when running in a browser since most modern browsers now natively support these. If your browser does not support these (https://caniuse.com/#feat=textencoder), then you can import them as a dependency through the following deprecated npm package: https://www.npmjs.com/package/text-encoding
@@ -84,6 +97,8 @@ const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), te
 ### Sending a transaction
 
 `transact()` is used to sign and push transactions onto the blockchain with an optional configuration object parameter.  This parameter can override the default value of `broadcast: true`, and can be used to fill TAPOS fields given `expireSeconds` and either `blocksBehind` or `useLastIrreversible`.  Given no configuration options, transactions are expected to be unpacked with TAPOS fields (`expiration`, `ref_block_num`, `ref_block_prefix`) and will automatically be broadcast onto the chain.
+
+also with `transaction_extensions` parameter can be set txfee-payer or trx-votes
 
 ```js
 (async () => {
