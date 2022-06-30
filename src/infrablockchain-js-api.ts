@@ -271,11 +271,18 @@ export class Api {
         return await Promise.all(actions.map(async (action) => {
             const { account, name, authorization, data } = action;
             const contract = await this.getContract(account);
-            const builtInContract = await this.getContract('sys.tokenabi');
+            let hasBuiltInAbi = false;
+            try {
+                await this.rpc.get_account('sys.tokenabi');
+                hasBuiltInAbi = true;
+            } catch (error) {
+                hasBuiltInAbi = false;
+            }
             if (typeof data !== 'object') {
                 return action;
             }
-            if (builtInActions.includes(name)) {
+            if (builtInActions.includes(name) && hasBuiltInAbi) {
+                const builtInContract = await this.getContract('sys.tokenabi');
                 return ser.serializeAction(
                     builtInContract, account, name, authorization, data, this.textEncoder, this.textDecoder);
             }
@@ -291,8 +298,15 @@ export class Api {
         const builtInActions = ['transfer', 'issue', 'redeem', 'settokenmeta', 'txfee'];
         return await Promise.all(actions.map(async ({ account, name, authorization, data }) => {
             const contract = await this.getContract(account);
-            const builtInContract = await this.getContract('sys.tokenabi');
-            if (builtInActions.includes(name)) {
+            let hasBuiltInAbi = false;
+            try {
+                await this.rpc.get_account('sys.tokenabi');
+                hasBuiltInAbi = true;
+            } catch (error) {
+                hasBuiltInAbi = false;
+            }
+            if (builtInActions.includes(name) && hasBuiltInAbi) {
+                const builtInContract = await this.getContract('sys.tokenabi');
                 return ser.deserializeAction(
                     builtInContract, account, name, authorization, data, this.textEncoder, this.textDecoder);
             }
