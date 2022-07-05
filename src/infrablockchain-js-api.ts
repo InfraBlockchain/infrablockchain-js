@@ -267,7 +267,7 @@ export class Api {
 
     /** Convert actions to hex */
     public async serializeActions(actions: ser.Action[]): Promise<ser.SerializedAction[]> {
-        const builtInActions = ['transfer', 'issue', 'redeem', 'settokenmeta', 'txfee'];
+        const builtInActions = ['transfer', 'issue', 'retire', 'settokenmeta', 'txfee'];
         return await Promise.all(actions.map(async (action) => {
             const { account, name, authorization, data } = action;
             const contract = await this.getContract(account);
@@ -295,7 +295,7 @@ export class Api {
 
     /** Convert actions from hex */
     public async deserializeActions(actions: ser.Action[]): Promise<ser.Action[]> {
-        const builtInActions = ['transfer', 'issue', 'redeem', 'settokenmeta', 'txfee'];
+        const builtInActions = ['transfer', 'issue', 'retire', 'settokenmeta', 'txfee'];
         return await Promise.all(actions.map(async ({ account, name, authorization, data }) => {
             const contract = await this.getContract(account);
             let hasBuiltInAbi = false;
