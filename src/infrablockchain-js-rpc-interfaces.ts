@@ -529,7 +529,7 @@ export interface GetTokenInfoResult {
 
 /** Return value of `/v1/chain/get_top_tx_vote_receiver_list` */
 export interface GetTopTxVoteReceiverListResult {
-    tx_vote_receiver: GetTxVoteStatForAccountResult[];
+    tx_vote_receiver_list: GetTxVoteStatForAccountResult[];
     total_tx_votes_weighted: string;
     total_tx_votes: number;
     more: boolean;
