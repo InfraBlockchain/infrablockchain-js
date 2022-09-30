@@ -18,7 +18,7 @@ export interface Abi {
     abi_extensions: { tag: number, value: string }[];
     variants?: { name: string, types: string[] }[];
     action_results?: { name: string, result_type: string }[],
-    kv_tables?: { [key: string]: { type: string, primary_index: { name: string, type: string }, secondary_indices: { [key: string]: { type: string }}[] } }[],
+    kv_tables?: { [key: string]: { type: string, primary_index: { name: string, type: string }, secondary_indices: { [key: string]: { type: string } }[] } }[],
 }
 
 export interface BlockHeader {
@@ -153,9 +153,9 @@ export interface GetAccountResult {
     cpu_limit: AccountResourceInfo;
     ram_usage: number;
     permissions: Permission[];
-    total_resources: ResourceOverview|null;
-    self_delegated_bandwidth: ResourceDelegation|null;
-    refund_request: RefundRequest|null;
+    total_resources: ResourceOverview | null;
+    self_delegated_bandwidth: ResourceDelegation | null;
+    refund_request: RefundRequest | null;
     voter_info: any;
     rex_info: any;
 }
@@ -238,7 +238,7 @@ export interface ProcessedTransaction {
 export interface PackedTransaction {
     id: string;
     signatures: string[];
-    compression: number|string;
+    compression: number | string;
     packed_context_free_data: string;
     context_free_data: string[];
     packed_trx: string;
@@ -265,7 +265,7 @@ export interface GetBlockResult {
     transaction_mroot: string;
     action_mroot: string;
     schedule_version: number;
-    new_producers: ProducerScheduleType|null;
+    new_producers: ProducerScheduleType | null;
     producer_signature: string;
     transactions: any;
     id: string;
@@ -293,7 +293,7 @@ export interface BlockSigningAuthority {
 
 export interface ProducerAuthority {
     producer_name: string;
-    authority: [ number|string, BlockSigningAuthority];
+    authority: [number | string, BlockSigningAuthority];
 };
 
 export interface ProducerAuthoritySchedule {
@@ -405,9 +405,9 @@ export interface GetInfoResult {
 
 /** Return value of /v1/chain/get_producer_schedule */
 export interface GetProducerScheduleResult {
-    active: ProducerAuthoritySchedule|null;
-    pending: ProducerAuthoritySchedule|null;
-    proposed: ProducerAuthoritySchedule|null;
+    active: ProducerAuthoritySchedule | null;
+    pending: ProducerAuthoritySchedule | null;
+    proposed: ProducerAuthoritySchedule | null;
 }
 
 export interface ProducerDetails {
@@ -538,7 +538,7 @@ export interface GetTopTxVoteReceiverListResult {
 /** Return value of `/v1/chain/get_tx_vote_stat_for_account` */
 export interface GetTxVoteStatForAccountResult {
     account: string;
-    tx_vote_weighted: string;
+    tx_votes_weighted: string;
     tx_votes: number;
 }
 
